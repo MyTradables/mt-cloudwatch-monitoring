@@ -16,7 +16,7 @@
     "scripts": {
         "prepare": "npx husky install",
         "lint": "npx eslint **/*.ts --fix --quiet",
-        "build": "npx rimraf dist & webpack",
+        "build": "npx rimraf dist & tsc",
         "watch": "tsc -w",
         "test": "jest",
         "test:watch": "jest --watch",
@@ -31,6 +31,9 @@
         "source-map-support": "^0.5.20"
     },
     "dependencies": {
-        "@aws-cdk/aws-lambda": "^1.129.0"
+        "@aws-cdk/aws-cloudwatch": "^1.129.0",
+        "@aws-cdk/aws-cloudwatch-actions": "^1.129.0",
+        "@aws-cdk/aws-sns": "^1.129.0",
+        "@aws-cdk/aws-sns-subscriptions": "^1.129.0"
     }
 }
